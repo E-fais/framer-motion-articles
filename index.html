@@ -11,16 +11,17 @@
 
 <body>
     <header class='header'>
-  
+        <img class='header__img' 
+        src='https://th.bing.com/th/id/OIP.ddGEE1Zz3q4IkCHQKmkuEAHaEK?w=290&h=180&c=7&r=0&o=5&pid=1.7'>
         <h1 class='header__title'>Framer Motion Beginner's guide.</h1>
-        <p class='header__subtitle'>Fais Edathil</p>
+        <p class='header__subtitle'> <a href="https://github.com/E-fais">Fais Edathil</a></p>
       
     </header>
-    <section class=section-intro'>
+    <section class='section-intro'>
         <h3>Introduction</h3>
         <p>Framer Motion is an animation library for React js.
             It is very easy to learn and beginner friendly as compared to vanilla CSS aniations.Using framer
-            motion in our project will speed up our work
+            motion in our project will speed up our work.
         <p>
 
 
@@ -33,16 +34,18 @@
             <span class='syntax'>import {motion} from 'framer-motion'</span>
         </p>
     </section>
-    <section class='chapter chapter-1'>
-        <h3 class='chaper__title'>Chapter-1</h3>
+    <section class='Animate attribute'>
+        <h3 class='chaper__title'>Animate Attribute</h3>
         <p class='section__body'>
             Let's start animating our first component.<br>
             First step is very simple, just add "motion." before every tags.
             <br>example: if you are animating h1,
             instead of <span class='syntax'>
-                h1
+                 &lt;h1&gt;
+                 &lt;/h1&gt; 
             </span> change to <span class='syntax'>
-                motion.h1
+                 &lt;motion.h1&gt;
+                 &lt;/motion.h1&gt;
             </span>
               <br>
                 Now we have to assign an animate attribute,
@@ -53,9 +56,50 @@
                   this will animate our element 100px away from 
                   actual position
         </p>
-  <img src="https://res.cloudinary.com/elvisdev2280/image/upload/v1629534308/blogs/Screenshot_2021-08-20_at_10.39.18_PM_j3paty.png" class='screen-shot'/>
-                <video class='result' src=""/>
-  
+ 
+   <div class='section__video'>
+                 <video controls width="400" height="300">
+  <source src="video-tag-example.mp4" type="video/mp4">
+  <source src="video-tag-sample.webm" type="video/webm">
+  <source src="video-tag-demo.ogg" type="video/ogg">
+  Video tag is not supported in this browser.
+</video> 
+</div>
+    <p class='section__body'>
+           feel free to play around other animation properties ike opacity,rotateX,background-color ,  font-size. etc <br>
+              Once we learn the basics ,Always try to  read the official docs for better understanding.
+              </p>
+    </section>
+
+<section class='chapter chapter-2'>
+    <h3 class='chapter__title'>
+               Initial attribute
+               </h3>
+               <p class='section__body'>
+        Now we can add an initial attribute so that we can customize our animation. <br>
+        Initial attribute as the name indicates , is used to define the the beginning of our animation. 
+        <br>Let's see an example <br>
+        <span class='syntax'>,br
+              &lt;motion.h1 <br>
+            initial={{opacity:0}} <br>
+            animate={{opacity:1}}
+            &gt;<br>
+            Hello World <br>
+      
+      &lt;/motion.h1&gt;
+       </span> <br>
+        Let's see this in action   </p>
+        
+        <div class='section__video'>
+                 <video controls width="400" height="300">
+  <source src="video-tag-example.mp4" type="video/mp4">
+  <source src="video-tag-sample.webm" type="video/webm">
+  <source src="video-tag-demo.ogg" type="video/ogg">
+  Video tag is not supported in this browser.
+</video>
+        </div>
+   
+      
     </section>
 
 </body>
