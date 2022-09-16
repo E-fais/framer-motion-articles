@@ -1,107 +1,214 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href=".style.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
     <title>Framer Motion Tutorial</title>
-</head>
-
-<body>
-    <header class='header'>
-        <img class='header__img' 
-        src='https://th.bing.com/th/id/OIP.ddGEE1Zz3q4IkCHQKmkuEAHaEK?w=290&h=180&c=7&r=0&o=5&pid=1.7'>
-        <h1 class='header__title'>Framer Motion Beginner's guide.</h1>
-        <p class='header__subtitle'> <a href="https://github.com/E-fais">Fais Edathil</a></p>
-      
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="header__img"
+        src="https://th.bing.com/th/id/OIP.ddGEE1Zz3q4IkCHQKmkuEAHaEK?w=290&h=180&c=7&r=0&o=5&pid=1.7"
+      />
+      <div>
+        <h1 class="header__title">Framer Motion</h1>
+        <h3 class="header__subtitle">A Beginner's guide</h3>
+        <a
+          class="header__subtitle"
+          target="_blank"
+          href="https://github.com/E-fais"
+          >Fais Edathil</a
+        >
+      </div>
     </header>
-    <section class='section-intro'>
-        <h3>Introduction</h3>
-        <p>Framer Motion is an animation library for React js.
-            It is very easy to learn and beginner friendly as compared to vanilla CSS aniations.Using framer
-            motion in our project will speed up our work.
-        <p>
+    <section class="section-intro section">
+      <h3>Introduction</h3>
+      <p>
+        Framer Motion is an animation library for React js. It is very easy to
+        learn and beginner friendly as compared to vanilla CSS aniations.Using
+        framer motion in our project will speed up our work.
+      </p>
 
+      <p></p>
+    </section>
 
+    <section class="section-chapter-1 section">
+      <h3 class="section__title">Installation</h3>
+      <h4 class="syntax">npm install framer-motion</h4>
+      <p class="section__body">
+        After Installation, need to import a motion component to our project as
+        follows:- <br />
+        <span class="syntax">import {motion} from 'framer-motion'</span>
+      </p>
     </section>
-    <section class='section-chapter-1'>
-        <h3 class='section__title'>installation</h3>
-        <h4>npm install framer-motion</h4>
-        <p class='section__body'>
-            After Installation, need to import a motion component to our project as follows:- <br>
-            <span class='syntax'>import {motion} from 'framer-motion'</span>
-        </p>
+    <section class="Animate attribute section">
+      <h3 class="chaper__title">Animate Attribute</h3>
+      <p class="section__body">
+        Let's start animating our first component.<br />
+        First step is very simple, just add "motion." before every tags.
+        <br />example: if you are animating h1,<br />
+        instead of <span class="syntax"> &lt;h1&gt; &lt;/h1&gt; </span> change
+        to <span class="syntax"> &lt;motion.h1&gt; &lt;/motion.h1&gt; </span>
+        <br />
+        Now we have to assign an animate attribute, and define what kind of
+        animation we want.
+        <span class="syntax"
+          ><br />
+          animate = {{x: " 100px "}} <br />
+        </span>
+        this will animate our element 100px away from actual position
+      </p>
+
+      <div class="section__video">
+        <video controls width="400" height="300">
+          <source src="video-tag-example.mp4" type="video/mp4" />
+          <source src="video-tag-sample.webm" type="video/webm" />
+          <source src="video-tag-demo.ogg" type="video/ogg" />
+          Video tag is not supported in this browser.
+        </video>
+      </div>
+      <p class="section__body">
+        feel free to play around other animation properties like
+        <i> opacity,rotateX,background-color, font-size.</i> etc <br />
+        Once we learn the basics ,Always try to read the official docs for
+        better understanding.
+      </p>
     </section>
-    <section class='Animate attribute'>
-        <h3 class='chaper__title'>Animate Attribute</h3>
-        <p class='section__body'>
-            Let's start animating our first component.<br>
-            First step is very simple, just add "motion." before every tags.
-            <br>example: if you are animating h1,
-            instead of <span class='syntax'>
-                 &lt;h1&gt;
-                 &lt;/h1&gt; 
-            </span> change to <span class='syntax'>
-                 &lt;motion.h1&gt;
-                 &lt;/motion.h1&gt;
-            </span>
-              <br>
-                Now we have to assign an animate attribute,
-                and define what kind of animation we want.
-                <span class='syntax'><br>
-                 animate={{x:"100px"}} <br>
+
+    <section class="chapter chapter-2 section">
+      <h3 class="chapter__title">Initial attribute</h3>
+      <p class="section__body">
+        Now we can add an initial attribute so that we can customize our
+        animation. <br />
+        Initial attribute as the name indicates , is used to define the the
+        beginning of our animation.
+        <br />Let's see an example <br />
+        <span class="syntax">
+          &lt;motion.h1 initial={{opacity:0}} animate={{opacity:1}} &gt;<br />
+          Hello World <br />
+
+          &lt;/motion.h1&gt;
+        </span>
+        <br />
+        Let's see this in action
+      </p>
+
+      <div class="section__video">
+        <video controls width="400" height="300">
+          <source src="video-tag-example.mp4" type="video/mp4" />
+          <source src="video-tag-sample.webm" type="video/webm" />
+          <source src="video-tag-demo.ogg" type="video/ogg" />
+          Video tag is not supported in this browser.
+        </video>
+      </div>
+    </section>
+    <section class="chapter chapter-3 section">
+      <h3 class="chapter__title">Transition Attribute</h3>
+      <p class="section__body">
+        Transition attribute gives us more control and customisation on our
+        project.<br />
+        Let's learn some properties that can be used inside transition attribute
+        <br />
+        <i>delay property: </i> <br />
+        If we set
+        <i> delay:1 </i> <br />then the animation will begin only after one
+        second. <br />See the sample code below: <br />
+        <span class="syntax">
+          &lt;motion.h1 <br />
+          initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1}}
+          &gt;<br />
+          Hello World <br />
+
+          &lt;/motion.h1&gt;
+        </span>
+        <br />
+        Let's try some transition properties such as
+        <i>duration, type,stiffness </i> etc
+      </p>
+
+      <div class="section__video">
+        <video controls width="400" height="300">
+          <source src="video-tag-example.mp4" type="video/mp4" />
+          <source src="video-tag-sample.webm" type="video/webm" />
+          <source src="video-tag-demo.ogg" type="video/ogg" />
+          Video tag is not supported in this browser.
+        </video>
+      </div>
+    </section>
+    <section class="section section-hover">
+        <h3 class="section__title">
+            Animation On Over
+        </h3>
+        <p class="section__body">
+            Just add a property <i>WhileHover</i> and there you go!<br>
+            Let's learn with an example<br>
+            
+                <span class="syntax">
+                    &lt;motion.button <br />
+                   WhileHover={{scale:1.1}}
+                    &gt;<br />
+                    Sample Button<br />
+          
+                    &lt;/motion.button&gt;
                   </span>
-                  this will animate our element 100px away from 
-                  actual position
+                  <div class="section__video">
+                    <video controls width="400" height="300">
+                      <source src="video-tag-example.mp4" type="video/mp4" />
+                      <source src="video-tag-sample.webm" type="video/webm" />
+                      <source src="video-tag-demo.ogg" type="video/ogg" />
+                      Video tag is not supported in this browser.
+                    </video>
+                  </div>
         </p>
- 
-   <div class='section__video'>
-                 <video controls width="400" height="300">
-  <source src="video-tag-example.mp4" type="video/mp4">
-  <source src="video-tag-sample.webm" type="video/webm">
-  <source src="video-tag-demo.ogg" type="video/ogg">
-  Video tag is not supported in this browser.
-</video> 
-</div>
-    <p class='section__body'>
-           feel free to play around other animation properties ike opacity,rotateX,background-color ,  font-size. etc <br>
-              Once we learn the basics ,Always try to  read the official docs for better understanding.
-              </p>
     </section>
+    <section class="section section-variants">
+        <h3 class="section__title">
+            Variants
+        </h3>
+        <p class="section__body">
+           We have learnt enough basics, congratulations !!.
+            Let's learn some advanced stuffs now.
+            Imagine we are working on a big project, defining animation properties in every line will be extremely difficult.<br>
+            Thats exactly were <i>Variants</i> come for our help.
+            In this method , we have to define our animations as an object . <br>
 
-<section class='chapter chapter-2'>
-    <h3 class='chapter__title'>
-               Initial attribute
-               </h3>
-               <p class='section__body'>
-        Now we can add an initial attribute so that we can customize our animation. <br>
-        Initial attribute as the name indicates , is used to define the the beginning of our animation. 
-        <br>Let's see an example <br>
-        <span class='syntax'>,br
-              &lt;motion.h1 <br>
-            initial={{opacity:0}} <br>
-            animate={{opacity:1}}
-            &gt;<br>
-            Hello World <br>
-      
-      &lt;/motion.h1&gt;
-       </span> <br>
-        Let's see this in action   </p>
-        
-        <div class='section__video'>
-                 <video controls width="400" height="300">
-  <source src="video-tag-example.mp4" type="video/mp4">
-  <source src="video-tag-sample.webm" type="video/webm">
-  <source src="video-tag-demo.ogg" type="video/ogg">
-  Video tag is not supported in this browser.
-</video>
-        </div>
-   
-      
+                <span class="syntax">
+                    const myVariants = { <br>
+                        start: {x:'-100vw'}, <br>
+                        final: {x:0,<br>
+                        transition: {
+                            delay:1,
+                            stiffness:120
+                        }<br>}
+                    } <br>
+                    </span>
+                    <i> myVariants, start, final </i> are my choice of names. 
+                    You can use any name you wish.
+                    <span class="syntax">
+                    &lt;motion.h1 <br />
+                   WhileHover={{scale:1.1}}
+                    &gt;<br />
+                    Sample Button<br />
+          
+                    &lt;/motion.h1&gt;
+                  </span>
+                  <div class="section__video">
+                    <video controls width="400" height="300">
+                      <source src="video-tag-example.mp4" type="video/mp4" />
+                      <source src="video-tag-sample.webm" type="video/webm" />
+                      <source src="video-tag-demo.ogg" type="video/ogg" />
+                      Video tag is not supported in this browser.
+                    </video>
+                  </div>
+        </p>
     </section>
-
-</body>
-
+  </body>
 </html>
