@@ -199,7 +199,9 @@
                     You can use any name you wish.
                     <span class="syntax">
                     &lt;motion.h1 <br />
-                   WhileHover={{scale:1.1}}
+                   Variants={myVariants}
+                   Initial="start"
+                   Animate="final"
                     &gt;<br />
                     Sample Button<br />
           
@@ -214,6 +216,9 @@
                       Video tag is not supported in this browser.
                     </video>
                   </div>
+                <br>
+<strong>Side Note:</string> Here variants are assigned as an object, hence inside curly bracket. While 
+Initila and animate properties are assigned as a string
         </p>
     </section>
     <section class="section section-variants">
