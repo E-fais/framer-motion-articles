@@ -68,7 +68,8 @@
       </p>
 
       <div class="section__video">
-        <video controls width="400" height="300">
+        <video class="video__item"
+         controls width="550" height="350">
           <source src="video-tag-example.mp4" type="video/mp4" />
           <source src="video-tag-sample.webm" type="video/webm" />
           <source src="video-tag-demo.ogg" type="video/ogg" />
@@ -102,7 +103,8 @@
       </p>
 
       <div class="section__video">
-        <video controls width="400" height="300">
+        <video class="video__item"
+        controls width="550" height="350">
           <source src="video-tag-example.mp4" type="video/mp4" />
           <source src="video-tag-sample.webm" type="video/webm" />
           <source src="video-tag-demo.ogg" type="video/ogg" />
@@ -134,8 +136,9 @@
         <i>duration, type,stiffness </i> etc
       </p>
 
-      <div class="section__video">
-        <video controls width="400" height="300">
+      <div  class="section__video">
+        <video class="video__item" 
+        controls width="550" height="350">
           <source src="video-tag-example.mp4" type="video/mp4" />
           <source src="video-tag-sample.webm" type="video/webm" />
           <source src="video-tag-demo.ogg" type="video/ogg" />
@@ -159,8 +162,10 @@
           
                     &lt;/motion.button&gt;
                   </span>
-                  <div class="section__video">
-                    <video controls width="400" height="300">
+                  <div 
+                   class="section__video">
+                    <video class="video__item"
+                    controls width="550" height="350">
                       <source src="video-tag-example.mp4" type="video/mp4" />
                       <source src="video-tag-sample.webm" type="video/webm" />
                       <source src="video-tag-demo.ogg" type="video/ogg" />
@@ -201,7 +206,8 @@
                     &lt;/motion.h1&gt;
                   </span>
                   <div class="section__video">
-                    <video controls width="400" height="300">
+                    <video class="video__item" 
+                    controls width="550" height="350">
                       <source src="video-tag-example.mp4" type="video/mp4" />
                       <source src="video-tag-sample.webm" type="video/webm" />
                       <source src="video-tag-demo.ogg" type="video/ogg" />
@@ -209,6 +215,74 @@
                     </video>
                   </div>
         </p>
+    </section>
+    <section class="section section-variants">
+        <h3 class="section__title">
+            Child Variants
+        </h3>
+        <p class="section__body">
+            Let's dive deep in to some advanced use cases of variants.<br>
+            When we have multiple amimations,it would not be a nice to see if the all the animations take place simultaniously.In such cases
+             we can set an orchastration for the parent and child animations,in such a way that  next animation take place
+              only after finishing previosu  animation.
+             <br>
+             <strong>See Examle:</strong>
+             <br>
+                   <span class="syntax">
+                    const myVariants = { <br>
+                        start: {opacity:0}, <br>
+                        final: {opacity:1,<br>
+                        transition: {
+                            when:'beforeChildren',
+                            staggeredChildren:0.4
+                        }<br>}
+                    } <br><br>
+                    </span>
+                   <span class="syntax">
+                    const childVariants = { <br>
+                        start: {opacity:0}, <br>
+                        final: {opacity:1,<br>
+                        }<br>
+                    
+                    </span>
+                    <span class="syntax">
+                    &lt;motion.div <br />
+                  variants=myVAriants}
+                  initial='start'
+                  animate='final'
+                    &gt;<br />
+                    <br />
+                    &lt;h1&gt;Hello World   &lt;/h1&gt;<br>
+                    &lt;p&gt; 
+                      The point of using Lorem Ipsum
+                       is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
+                       &lt;/p&gt;
+                      </span> </p>
+                          <div class="childVariants">
+                            <p>
+                            <span class="syntax">
+                                   &lt;motion.div<br> 
+                                 variants={childVariants}
+                                 &gt;<br>
+                                 &lt;hi&gt;This is a child component&lt;hi&gt;<br>
+                                 &lt;/motion.div&gt;<br> 
+                                </span>
+                                </div>
+                              
+                         <span class="syntax">
+                          &lt;/motion.div&gt;
+                         </span>  
+                        </p>     
+                   
+                  <div class="section__video">
+                    <video class="video__item" controls width="550" height="350">
+                      <source src="video-tag-example.mp4" type="video/mp4" />
+                      <source src="video-tag-sample.webm" type="video/webm" />
+                      <source src="video-tag-demo.ogg" type="video/ogg" />
+                      Video tag is not supported in this browser.
+                    </video>
+                  </div>
+        
     </section>
   </body>
 </html>

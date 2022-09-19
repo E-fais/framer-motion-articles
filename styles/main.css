@@ -67,25 +67,33 @@ h3{
     
     }
 }
+
 .syntax{
     font-family: var(--ff-syntax);
-    color:#943126 ;
-    font-weight: 400;
+    color:var(--clr-dark-one) ;
+    font-weight: 700;
 }
 @media(max-width:600px) {
     .section{
         padding: 1em;
     }
-.header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5em;
-    padding-top:0;
+    .video__item,
+    .section__video{
+       margin: auto;   
+       max-width: 300px;
+       height: 250px;
+ }
+   .header__title{
+        text-align: center;
+        padding: 0; 
+}
+.header__subtitle{
+    margin-left: 1.4em;
+    padding-bottom: 0.7em;
 }
 .header__img{
-    width:100%;
+   display: none;
+   
 }
 }
 .header__img{
@@ -97,8 +105,8 @@ h3{
 .header__subtitle{
     color: var(--clr-dark-one);
     text-decoration: none;
-
-    
 }
-
+.childVariants{
+    padding-left: 2em;
+}
 
