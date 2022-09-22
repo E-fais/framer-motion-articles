@@ -70,12 +70,28 @@ h3{
 
 .syntax{
     font-family: var(--ff-syntax);
-    color:var(--clr-dark-one) ;
+    color:green ;
     font-weight: 700;
 }
+.code-image-container{
+    margin: auto;
+    padding: auto;
+}
+
+.code-img{
+    width: 550px;
+    height:350px;
+}
 @media(max-width:600px) {
+    .code-image-container{
+        margin-left: 1.2em;
+    }
     .section{
         padding: 1em;
+    }
+    .code-img{
+        max-width: 300px;
+        max-height: 250px;
     }
     .video__item,
     .section__video{

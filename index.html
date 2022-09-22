@@ -64,15 +64,20 @@
           ><br />
           animate = {{x: " 100px "}} <br />
         </span>
-        this will animate our element 100px away from actual position
+        this will animate our element 100px away from actual position.<br>
       </p>
-
+      <div class="code-image-container">
+        <img class="code-img"
+        src="./Assets/Images/chapter-1-image.png" alt="">
+      <p> 
+         <strong> Let's check the result</strong>
+        </p>
+      </div>
+      
       <div class="section__video">
         <video class="video__item"
          controls width="550" height="350">
-          <source src="video-tag-example.mp4" type="video/mp4" />
-          <source src="video-tag-sample.webm" type="video/webm" />
-          <source src="video-tag-demo.ogg" type="video/ogg" />
+          <source src="./Assets/videos/chapter-1.mp4" type="video/mp4" />
           Video tag is not supported in this browser.
         </video>
       </div>
@@ -91,23 +96,20 @@
         animation. <br />
         Initial attribute as the name indicates , is used to define the the
         beginning of our animation.
-        <br />Let's see an example <br />
-        <span class="syntax">
-          &lt;motion.h1 initial={{opacity:0}} animate={{opacity:1}} &gt;<br />
-          Hello World <br />
-
-          &lt;/motion.h1&gt;
-        </span>
-        <br />
-        Let's see this in action
+        <br />Look at the sample code below:<br />
       </p>
+      <div class="code-image-container">
+        <img class="code-img"
+        src="./Assets/Images/chapter-2-image (2).png" alt="">
+      <p> 
+         <strong> See the difference</strong>
+        </p>
+      </div>
 
       <div class="section__video">
         <video class="video__item"
         controls width="550" height="350">
-          <source src="video-tag-example.mp4" type="video/mp4" />
-          <source src="video-tag-sample.webm" type="video/webm" />
-          <source src="video-tag-demo.ogg" type="video/ogg" />
+          <source src="./Assets/videos/iniatal-ui.mp4" type="video/mp4" />
           Video tag is not supported in this browser.
         </video>
       </div>
@@ -123,27 +125,24 @@
         If we set
         <i> delay:1 </i> <br />then the animation will begin only after one
         second. <br />See the sample code below: <br />
-        <span class="syntax">
-          &lt;motion.h1 <br />
-          initial={{opacity:0}} animate={{opacity:1}} transition={{delay:1}}
-          &gt;<br />
-          Hello World <br />
-
-          &lt;/motion.h1&gt;
-        </span>
+        <div class="code-image-container">
+          <img class="code-img"
+          src="./Assets/Images/transition-img.png" alt="">
+        <p> 
+           <strong> Let's see the changes in the animation</strong>
+           <div class="section__video">
+            <video class="video__item"
+            controls width="550" height="350">
+              <source src="./Assets/videos/transition-type-spring-ui.mp4" type="video/mp4" />
+              Video tag is not supported in this browser.
+            </video>
+          </div>           
+          </p>
+        </div>
         <br />
-        Let's try some transition properties such as
+         Experiment with transition properties such as
         <i>duration, type,stiffness </i> etc
       </p>
-
-      <div  class="section__video">
-        <video class="video__item" 
-        controls width="550" height="350">
-          <source src="video-tag-example.mp4" type="video/mp4" />
-          <source src="video-tag-sample.webm" type="video/webm" />
-          <source src="video-tag-demo.ogg" type="video/ogg" />
-          Video tag is not supported in this browser.
-        </video>
       </div>
     </section>
     <section class="section section-hover">
@@ -276,6 +275,48 @@ Initila and animate properties are assigned as a string
                               
                          <span class="syntax">
                           &lt;/motion.div&gt;
+                         </span>  
+                        </p>     
+                   
+                  <div class="section__video">
+                    <video class="video__item" controls width="550" height="350">
+                      <source src="video-tag-example.mp4" type="video/mp4" />
+                      <source src="video-tag-sample.webm" type="video/webm" />
+                      <source src="video-tag-demo.ogg" type="video/ogg" />
+                      Video tag is not supported in this browser.
+                    </video>
+                  </div>
+        
+    </section>
+    <section class="section section-variants">
+        <h3 class="section__title">
+            Key Frames
+        </h3>
+        <p class="section__body">
+           When it comes to animation, key frames are inevitable. 
+           Let's start with basics.<br>
+         We are going to define our keyframes  array inside the transtion object.Confused? Don't worry,  it's not that complicated. 
+             <br>
+             <strong>Have a quick look at the  example code </strong>
+             <br>
+                   <span class="syntax">
+                    const myVariants = { <br>
+                       
+                        hover: {<br>
+                         scale:[1,1.1,1,1.1,1.1]<br>
+                        }
+                    } <br><br>
+                    </span>
+                  
+                    <span class="syntax">
+                    &lt;motion.button <br />
+                  variants={myVAriants}<br>
+                  WhileHover='hover'
+                    &gt;<br />
+                      </span>
+                      click me <br>
+                         <span class="syntax">
+                          &lt;/motion.button&gt;
                          </span>  
                         </p>     
                    
