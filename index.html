@@ -47,7 +47,15 @@
         After Installation, need to import a motion component to our project as
         follows:- <br />
         <span class="syntax">import {motion} from 'framer-motion'</span>
+        <h3>Possible Error On import </h3>
       </p>
+        <img class="error-img" src="./Assets/Images/import-error.png" alt="import framer-motion error">
+       <p class="section__body">
+        In such cases try following code <br>
+       </p> 
+       <span class="syntax">
+         import { motion } from 'framer-motion/dist/framer-motion'
+       </span>
     </section>
     <section class="Animate attribute section">
       <h3 class="chaper__title">Animate Attribute</h3>
@@ -83,7 +91,7 @@
       </div>
       <p class="section__body">
         feel free to play around other animation properties like
-        <i> opacity,rotateX,background-color, font-size.</i> etc <br />
+        <span class="syntax"> opacity, rotateX, background-color, font-size.</span> etc <br />
         Once we learn the basics ,Always try to read the official docs for
         better understanding.
       </p>
@@ -100,7 +108,7 @@
       </p>
       <div class="code-image-container">
         <img class="code-img"
-        src="./Assets/Images/chapter-2-image (2).png" alt="">
+        src="./Assets/Images/initail-attribute-img.png" alt="">
       <p> 
          <strong> See the difference</strong>
         </p>
@@ -121,9 +129,9 @@
         project.<br />
         Let's learn some properties that can be used inside transition attribute
         <br />
-        <i>delay property: </i> <br />
+        <strong>Delay Property: </strong> <br />
         If we set
-        <i> delay:1 </i> <br />then the animation will begin only after one
+        <span class="syntax"> delay:1 </span> <br />then the animation will begin only after one
         second. <br />See the sample code below: <br />
         <div class="code-image-container">
           <img class="code-img"
@@ -141,7 +149,7 @@
         </div>
         <br />
          Experiment with transition properties such as
-        <i>duration, type,stiffness </i> etc
+       <span class="syntax"> duration,  type, stiffness </span> etc
       </p>
       </div>
     </section>
@@ -150,26 +158,25 @@
             Animation On Over
         </h3>
         <p class="section__body">
-            Just add a property <i>WhileHover</i> and there you go!<br>
+            Just add a property <span class="syntax">whileHover</span> and there you go!<br>
             Let's learn with an example<br>
             
-                <span class="syntax">
-                    &lt;motion.button <br />
-                   WhileHover={{scale:1.1}}
-                    &gt;<br />
-                    Sample Button<br />
-          
-                    &lt;/motion.button&gt;
-                  </span>
+            <div class="code-image-container">
+              <img class="code-img"
+              src="./Assets/Images/hover-img.png" alt="">
+            <p> 
+               <strong> 
+                Watch the magic
+               </strong>
+              </p>
+            </div>
                   <div 
                    class="section__video">
-                    <video class="video__item"
-                    controls width="550" height="350">
-                      <source src="video-tag-example.mp4" type="video/mp4" />
-                      <source src="video-tag-sample.webm" type="video/webm" />
-                      <source src="video-tag-demo.ogg" type="video/ogg" />
-                      Video tag is not supported in this browser.
-                    </video>
+                   <video class="video__item"
+            controls width="550" height="350">
+              <source src="./Assets/videos/hover-ui.mp4" type="video/mp4" />
+              Video tag is not supported in this browser.
+            </video>
                   </div>
         </p>
     </section>
@@ -180,113 +187,93 @@
         <p class="section__body">
            We have learnt enough basics, congratulations !!.
             Let's learn some advanced stuffs now.
-            Imagine we are working on a big project, defining animation properties in every line will be extremely difficult.<br>
+            Imagine we are working on a big project, defining animation properties in every line will be 
+            extremely difficult.<br>
             Thats exactly were <i>Variants</i> come for our help.
             In this method , we have to define our animations as an object . <br>
 
-                <span class="syntax">
-                    const myVariants = { <br>
-                        start: {x:'-100vw'}, <br>
-                        final: {x:0,<br>
-                        transition: {
-                            delay:1,
-                            stiffness:120
-                        }<br>}
-                    } <br>
-                    </span>
-                    <i> myVariants, start, final </i> are my choice of names. 
-                    You can use any name you wish.
-                    <span class="syntax">
-                    &lt;motion.h1 <br />
-                   Variants={myVariants}
-                   Initial="start"
-                   Animate="final"
-                    &gt;<br />
-                    Sample Button<br />
-          
-                    &lt;/motion.h1&gt;
-                  </span>
+            <div class="code-image-container">
+              <img class="code-img"
+              src="./Assets/Images/variants-img.png" alt="">
+            </div>
+              <p class="section__body">
+                     <span class='syntax'>
+                    myVariants, start and final </span> are my choice of names. 
+                    You can use any name you wish. <br>
+                    <strong> 
+                       Our animation will not have any difference if we use variants,
+                         but our code will look much cleaner.
+                     </strong>
+                     </p>
                   <div class="section__video">
-                    <video class="video__item" 
+                    <video class="video__item"
                     controls width="550" height="350">
-                      <source src="video-tag-example.mp4" type="video/mp4" />
-                      <source src="video-tag-sample.webm" type="video/webm" />
-                      <source src="video-tag-demo.ogg" type="video/ogg" />
+                      <source src="./Assets/videos/variant-1-ui.mp4" type="video/mp4" />
                       Video tag is not supported in this browser.
                     </video>
                   </div>
                 <br>
-<strong>Side Note:</string> Here variants are assigned as an object, hence inside curly bracket. While 
-Initila and animate properties are assigned as a string
+            <strong>Side Note:</strong> 
+           <p class="section__body">
+               Here variants are assigned as an object, hence wrapped inside curly brackets,  mean while 
+              Initial and Animate attributes are assigned as strings.
         </p>
     </section>
     <section class="section section-variants">
         <h3 class="section__title">
-            Child Variants
+            Multiple Variants
         </h3>
         <p class="section__body">
-            Let's dive deep in to some advanced use cases of variants.<br>
-            When we have multiple amimations,it would not be a nice to see if the all the animations take place simultaniously.In such cases
-             we can set an orchastration for the parent and child animations,in such a way that  next animation take place
-              only after finishing previosu  animation.
-             <br>
-             <strong>See Examle:</strong>
-             <br>
-                   <span class="syntax">
-                    const myVariants = { <br>
-                        start: {opacity:0}, <br>
-                        final: {opacity:1,<br>
-                        transition: {
-                            when:'beforeChildren',
-                            staggeredChildren:0.4
-                        }<br>}
-                    } <br><br>
-                    </span>
-                   <span class="syntax">
-                    const childVariants = { <br>
-                        start: {opacity:0}, <br>
-                        final: {opacity:1,<br>
-                        }<br>
-                    
-                    </span>
-                    <span class="syntax">
-                    &lt;motion.div <br />
-                  variants=myVAriants}
-                  initial='start'
-                  animate='final'
-                    &gt;<br />
-                    <br />
-                    &lt;h1&gt;Hello World   &lt;/h1&gt;<br>
-                    &lt;p&gt; 
-                      The point of using Lorem Ipsum
-                       is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-                       &lt;/p&gt;
-                      </span> </p>
-                          <div class="childVariants">
-                            <p>
-                            <span class="syntax">
-                                   &lt;motion.div<br> 
-                                 variants={childVariants}
-                                 &gt;<br>
-                                 &lt;hi&gt;This is a child component&lt;hi&gt;<br>
-                                 &lt;/motion.div&gt;<br> 
-                                </span>
-                                </div>
-                              
-                         <span class="syntax">
-                          &lt;/motion.div&gt;
-                         </span>  
-                        </p>     
-                   
-                  <div class="section__video">
-                    <video class="video__item" controls width="550" height="350">
-                      <source src="video-tag-example.mp4" type="video/mp4" />
-                      <source src="video-tag-sample.webm" type="video/webm" />
-                      <source src="video-tag-demo.ogg" type="video/ogg" />
-                      Video tag is not supported in this browser.
-                    </video>
+          
+        We can define different  variants for different objects.
+           <br>
+           <strong> 
+            Have a look at the code below
+           </strong>
+             <br> </p>         
+             <div class="code-image-container">
+              <img class="code-img"
+              src="./Assets/Images/childvariant-1.png" alt="">
+            <p> 
+               <strong> 
+              See the result
+               </strong>
+              </p>
+            </div>
+                  <div 
+                   class="section__video">
+                   <video class="video__item"
+            controls width="550" height="350">
+              <source src="./Assets/videos/childvariant-1-vid.mp4" type="video/mp4" />
+              Video tag is not supported in this browser.
+            </video>
                   </div>
-        
+                  <p class="section__body">
+                    We can use orchestration properties which make our animation much better.
+                    Here both animation takes place simultaniously,which is not looking great.<br>
+                    <strong>when property:</strong>
+                    <br>
+                      If we simply add the following line inside transition object,
+                      child animation begin only after completing parent animation. <br>
+                    <span class="syntax">when:'beforeChildren'</span>
+                    <strong>See the code below </strong>
+                  </p>
+                  <div class="code-image-container">
+                    <img class="code-img"
+                    src="./Assets/Images/when-beforechildren.png" alt="">
+                  <p> 
+                     <strong> 
+                    See the result
+                     </strong>
+                    </p>
+                  </div>
+                        <div 
+                         class="section__video">
+                         <video class="video__item"
+                  controls width="550" height="350">
+                    <source src="./Assets/videos/when-before-children.mp4" type="video/mp4" />
+                    Video tag is not supported in this browser.
+                  </video>
     </section>
     <section class="section section-variants">
         <h3 class="section__title">
