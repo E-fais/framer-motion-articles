@@ -33,11 +33,13 @@
       <h3>Introduction</h3>
       <p>
         Framer Motion is an animation library for React js. It is very easy to
-        learn and beginner friendly as compared to vanilla CSS aniations.Using
-        framer motion in our project will speed up our work.
+        learn and beginner friendly as compared to vanilla CSS animations.Using
+        framer motion in our project will speed up our work. Once we learn the basics ,
+        always try to read the official docs for
+        better understanding.
+        <br>
+        Now let's start animating. 
       </p>
-
-      <p></p>
     </section>
 
     <section class="section-chapter-1 section">
@@ -57,19 +59,23 @@
          import { motion } from 'framer-motion/dist/framer-motion'
        </span>
     </section>
-    <section class="Animate attribute section">
+    <section class=" section animate-attribute-section">
       <h3 class="chaper__title">Animate Attribute</h3>
       <p class="section__body">
         Let's start animating our first component.<br />
         First step is very simple, just add "motion." before every tags.
-        <br />example: if you are animating h1,<br />
-        instead of <span class="syntax"> &lt;h1&gt; &lt;/h1&gt; </span> change
-        to <span class="syntax"> &lt;motion.h1&gt; &lt;/motion.h1&gt; </span>
+        <br />
+        Example:
+         <br> 
+        If  you are animating h1,<br />
+        instead of <span class="syntax"> &lt;h1&gt; Hello World  &lt;/h1&gt; </span> write
+        <br>
+         <span class="syntax"> &lt;motion.h1&gt;  Hello World  &lt;/motion.h1&gt; </span>
         <br />
         Now we have to assign an animate attribute, and define what kind of
-        animation we want.
-        <span class="syntax"
-          ><br />
+        animation we want.<br />
+        eg:
+        <span class="syntax">
           animate = {{x: " 100px "}} <br />
         </span>
         this will animate our element 100px away from actual position.<br>
@@ -90,10 +96,9 @@
         </video>
       </div>
       <p class="section__body">
-        feel free to play around other animation properties like
+        Feel free to play around with other animation properties like
         <span class="syntax"> opacity, rotateX, background-color, font-size.</span> etc <br />
-        Once we learn the basics ,Always try to read the official docs for
-        better understanding.
+       
       </p>
     </section>
 
@@ -102,7 +107,7 @@
       <p class="section__body">
         Now we can add an initial attribute so that we can customize our
         animation. <br />
-        Initial attribute as the name indicates , is used to define the the
+        Initial attribute as the name indicates , is used to define the
         beginning of our animation.
         <br />Look at the sample code below:<br />
       </p>
@@ -120,36 +125,70 @@
           <source src="./Assets/videos/iniatal-ui.mp4" type="video/mp4" />
           Video tag is not supported in this browser.
         </video>
+        <p class="section__body">
+          What did just happened here? <br>
+          Here X:0 means original position of the object.<br>
+        When the page renders animation begins  300 px away from original position and 
+        at the end of the animation object reach at it's original position,that is X:0 
+        <br> <br>
+         <strong> Assingment:</strong>  
+      <br>
+      Now try animting  opacity property yourself.
+      <br>
+      Hint: initial= opacity:0 <br>
+      <span> </span>animate=opacity:1
+        </p>
       </div>
     </section>
     <section class="chapter chapter-3 section">
       <h3 class="chapter__title">Transition Attribute</h3>
       <p class="section__body">
         Transition attribute gives us more control and customisation on our
-        project.<br />
-        Let's learn some properties that can be used inside transition attribute
+        animation.
+        We have already learned to move object from one position to other.We can define a transition "type" 
+        for this animation.
         <br />
-        <strong>Delay Property: </strong> <br />
-        If we set
-        <span class="syntax"> delay:1 </span> <br />then the animation will begin only after one
-        second. <br />See the sample code below: <br />
+        Here is an example for animation type 'spring' which is also the default type.Explore more types yourself. 
+        <br />
+        <strong> See the sample code below:</strong> 
+         <br />
         <div class="code-image-container">
           <img class="code-img"
           src="./Assets/Images/transition-img.png" alt="">
-        <p> 
-           <strong> Let's see the changes in the animation</strong>
-           <div class="section__video">
+        </div>
+         <p> <strong> Let's see the changes in the animation</strong></p>
+          <div class="section__video">
             <video class="video__item"
             controls width="550" height="350">
-              <source src="./Assets/videos/transition-type-spring-ui.mp4" type="video/mp4" />
-              Video tag is not supported in this browser.
-            </video>
-          </div>           
+            <source src="./Assets/videos/transition-type-spring-ui.mp4" type="video/mp4" />
+            Video tag is not supported in this browser.
+          </video>
+        </div>           
+        <p class="section__body"> 
+            Let's learn some properties that can be used inside transition attribute
+            <br />
+            <strong>Delay Property: </strong> <br />
+            If we set
+            <span class="syntax"> delay:1 </span> 
+            <br />
+            then the animation will begin only after one second. <br>
+            <strong>
+              Duration Property: 
+            </strong>
+             <br />
+            <span class="syntax">
+               duration:2 
+              </span> 
+              <br /> 
+              Duration for the animation will be 2 seconds.
           </p>
-        </div>
-        <br />
-         Experiment with transition properties such as
-       <span class="syntax"> duration,  type, stiffness </span> etc
+        
+        <strong> 
+          Assingment:
+        </strong>
+        <br><br />
+         Try animating with transition properties such as
+       <span class="syntax"> duration,  type, stiffness </span> etc 
       </p>
       </div>
     </section>
@@ -189,7 +228,7 @@
             Let's learn some advanced stuffs now.
             Imagine we are working on a big project, defining animation properties in every line will be 
             extremely difficult.<br>
-            Thats exactly were <i>Variants</i> come for our help.
+            Thats exactly were <b>Variants</b> come for our help.
             In this method , we have to define our animations as an object . <br>
 
             <div class="code-image-container">
@@ -213,7 +252,9 @@
                     </video>
                   </div>
                 <br>
-            <strong>Side Note:</strong> 
+            <strong>
+              Side Note:
+            </strong> 
            <p class="section__body">
                Here variants are assigned as an object, hence wrapped inside curly brackets,  mean while 
               Initial and Animate attributes are assigned as strings.
@@ -248,15 +289,21 @@
               Video tag is not supported in this browser.
             </video>
                   </div>
-                  <p class="section__body">
-                    We can use orchestration properties which make our animation much better.
-                    Here both animation takes place simultaniously,which is not looking great.<br>
+                   <p class="section__body">
+                    Here both animations take place simultaniously,which is not looking great.<br>
+                    So we can use orchestration properties  which will give a better look for our animations.
+                    <br>
                     <strong>when property:</strong>
                     <br>
                       If we simply add the following line inside transition object,
                       child animation begin only after completing parent animation. <br>
-                    <span class="syntax">when:'beforeChildren'</span>
-                    <strong>See the code below </strong>
+                    <span class="syntax">
+                      when:'beforeChildren'
+                    </span>
+                     <br>
+                     <strong> 
+                      See the code below:
+                     </strong>
                   </p>
                   <div class="code-image-container">
                     <img class="code-img"
@@ -274,6 +321,47 @@
                     <source src="./Assets/videos/when-before-children.mp4" type="video/mp4" />
                     Video tag is not supported in this browser.
                   </video>
+                  <p class="section__body">
+                    <strong>
+                      Stagger Children:
+                    </strong>
+                    <br> 
+                
+                    When we have more child component animations inside our parent div, we can set this
+                    <span class="syntax">
+                      staggerChildren.
+                    </span> <br>
+                    This will make animation one by one.Are you confused of my explanation?<br>
+                    Don't worry,
+                     just watch the end result and you will get to know what's exactly
+                     happening.
+                    <br>
+                     <strong> 
+                      See the code below:
+                     </strong>
+                  </p>
+                  <div class="code-image-container">
+                    <img class="code-img"
+                    src="./Assets/Images/stagger-children.png" alt="">
+                  <p> 
+                     <strong> 
+                    See the result
+                     </strong>
+                    </p>
+                  </div>
+                        <div 
+                         class="section__video">
+                         <video class="video__item"
+                  controls width="550" height="350">
+                    <source src="./Assets/videos/staggerChildren.mp4" type="video/mp4" />
+                    Video tag is not supported in this browser.
+                  </video>
+                  <p class="section__body">
+                    Be creative and practice with variety of combinations for parent and child animations.<br>
+                    Did you notice two new properties inside transition ? <br>
+                    <span class="syntax">damping & mass</span> , what are they?<br>
+                    That's the Assingment for this section. Change it's values and find yourself what happpens.
+                  </p>
     </section>
     <section class="section section-variants">
         <h3 class="section__title">
@@ -282,7 +370,9 @@
         <p class="section__body">
            When it comes to animation, key frames are inevitable. 
            Let's start with basics.<br>
-         We are going to define our keyframes  array inside the transtion object.Confused? Don't worry,  it's not that complicated. 
+         We are going to define our keyframes  array inside the transtion object.Confused?
+          Don't worry, 
+ it's not that complicated. 
              <br>
              <strong>Have a quick look at the  example code </strong>
              <br>
