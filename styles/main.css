@@ -113,8 +113,8 @@ h3{
 content: '';
 width:100%;
 display: block;
-height: 1px;
-background:white;
+height: 3px;
+background:black;
  }
    .header__title{
         text-align: center;
