@@ -6,7 +6,6 @@ body{
     margin: 0;
     padding: 0;
     background: #F2F2F2;
-
 }
 
 :root{
@@ -109,6 +108,13 @@ h3{
        margin: auto;   
        max-width: 300px;
        height: 250px;
+ }
+ .section__video::before{
+content: '';
+width:100%;
+display: block;
+height: 1px;
+background:white;
  }
    .header__title{
         text-align: center;
