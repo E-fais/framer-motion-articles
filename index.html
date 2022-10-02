@@ -3,47 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="framer motion tutorial for beginners.  React js animation library tutorial. " />
+    <meta name="Author" content="Fais Edathil " />
+    <link rel="icon" type="image/x-icon" href="/Assets//Images/framer-motion-favicon.jpeg">
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fb27eb1138.js" crossorigin="anonymous"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/fb27eb1138.js" crossorigin="anonymous"></script>
     <title>Framer Motion Tutorial</title>
   </head>
   <body>
     <header class="header">
-      <img
+      <img alt="framer motion"
         class="header__img"
         src="https://th.bing.com/th/id/OIP.ddGEE1Zz3q4IkCHQKmkuEAHaEK?w=290&h=180&c=7&r=0&o=5&pid=1.7"
       />
       <div>
         <h1 class="header__title">Framer Motion</h1>
-        <h3 class="header__subtitle">A Beginner's guide</h3>
+        <h3 class="header__subtitle">A Beginner's Guide</h3>
         <a
-          class="header__subtitle"
           target="_blank"
           href="https://github.com/E-fais"
-          >Fais Edathil</a
+          ><h4 class='header__subtitle-author' >Fais Edathil</h4></a
         >
       </div>
     </header>
-    <section class="section-intro section">
+    <section class="section-tabel-of-contents">
+      <div>
+      <h3 class="section__title">
+        Table Of Contents
+      </h3>
+      <ul class="table-of-contents-list">
+        <a href="#intro"><li class="table-item">Introduction</li></a>
+        <a href="#install"><li class="table-item">Installation</li></a>
+        <a href="#animate"><li class="table-item">Animate Attribute</li></a>
+        <a href="#initial"><li class="table-item">Initial Attribute</a></li>
+        <a href="#transition"><li class="table-item">Transition Attribute</li></a>
+        <a href="#hover"><li class="table-item">Animation On Hover</li></a>
+        <a href="#variants"><li class="table-item">Variants</li> </a> 
+        <a href="#multiple-variants"><li class="table-item">Multiple  Variants</li></a>
+        <a href="#keyframes"><li class="table-item">Key Frames</li>
+        <a href="#yoyo"><li class="table-item">Key Frames: YoYo</li></a>
+        <a href="#loader"><li class="table-item">Custom Loader</li></a>
+        <a href="#use-cycle"><li class="table-item">Use Cycle Hook</li></a>
+        <a href="#about"><li class="table-item">About Author</li></a>
+      </ul>
+    </div>
+    </section>
+    <section class="section-intro section" id="intro">
       <h3>Introduction</h3>
-      <p>
+      <p class="section__body">
         Framer Motion is an animation library for React js. It is very easy to
         learn and beginner friendly as compared to vanilla CSS animations.Using
         framer motion in our project will speed up our work. Once we learn the basics ,
         always try to read the official docs for
-        better understanding.
-        <br>
-        Now let's start animating. 
+        better understanding.</p>
+        <div class="git-link">
+          <a href="#">
+            <i class="fa-brands fa-github"></i> <strong> Link For The Source Codes</strong>
+           </a> 
+        </div>
+        
+       <p>  All the topics are saved as seperate branches </p>
+         <br>
+       <strong >Now let's start animating.</strong> 
       </p>
     </section>
 
-    <section class="section-chapter-1 section">
+    <section class="section-chapter-1 section" id="install">
       <h3 class="section__title">Installation</h3>
       <h4 class="syntax">npm install framer-motion</h4>
       <p class="section__body">
@@ -60,7 +95,7 @@
          import { motion } from 'framer-motion/dist/framer-motion'
        </span>
     </section>
-    <section class=" section animate-attribute-section">
+    <section class=" section animate-attribute-section" id="animate">
       <h3 class="chaper__title">Animate Attribute</h3>
       <p class="section__body">
         Let's start animating our first component.<br />
@@ -82,7 +117,7 @@
         this will animate our element 100px away from actual position.<br>
       </p>
       <div class="code-image-container">
-        <img class="code-img"
+        <img  class="code-img"
         src="./Assets/Images/chapter-1-image.png" alt="">
       <p> 
          <strong> Let's check the result</strong>
@@ -103,7 +138,7 @@
       </p>
     </section>
 
-    <section class="chapter chapter-2 section">
+    <section class="section chapter-2 section" id="initial">
       <h3 class="chapter__title">Initial attribute</h3>
       <p class="section__body">
         Now we can add an initial attribute so that we can customize our
@@ -142,7 +177,7 @@
       <span> </span>animate=opacity:1
         </p>
     </section>
-    <section class="chapter chapter-3 section">
+    <section class="chapter chapter-3 section" id="transition">
       <h3 class="chapter__title">Transition Attribute</h3>
       <p class="section__body">
         Transition attribute gives us more control and customisation on our
@@ -188,19 +223,20 @@
         <strong> 
           Assingment:
         </strong>
-        <br><br />
+        <br>
          Try animating with transition properties such as
        <span class="syntax"> duration,  type, stiffness </span> etc 
       </p>
       </div>
     </section>
-    <section class="section section-hover">
+    <section class="section section-hover" id="hover">
         <h3 class="section__title">
             Animation On Over
         </h3>
         <p class="section__body">
             Just add a property <span class="syntax">whileHover</span> and there you go!<br>
             Let's learn with an example<br>
+          </p>
             
             <div class="code-image-container">
               <img class="code-img"
@@ -219,9 +255,9 @@
               Video tag is not supported in this browser.
             </video>
                   </div>
-        </p>
+       
     </section>
-    <section class="section section-variants">
+    <section class="section section-variants" id="variants">
         <h3 class="section__title">
             Variants
         </h3>
@@ -231,8 +267,8 @@
             Imagine we are working on a big project, defining animation properties in every line will be 
             extremely difficult.<br>
             Thats exactly were <b>Variants</b> come for our help.
-            In this method , we have to define our animations as an object . <br>
-
+            In this method , we have to define our animations as an object .
+</p>
             <div class="code-image-container">
               <img class="code-img"
               src="./Assets/Images/variants-img.png" alt="">
@@ -253,7 +289,7 @@
                       Video tag is not supported in this browser.
                     </video>
                   </div>
-                <br>
+              
             <strong>
               Side Note:
             </strong> 
@@ -262,7 +298,7 @@
               Initial and Animate attributes are assigned as strings.
         </p>
     </section>
-    <section class="section section-variants">
+    <section class="section section-variants" id="multiple-variants">
         <h3 class="section__title">
             Multiple Variants
         </h3>
@@ -369,7 +405,7 @@
                     That's the Assingment for this section. Change it's values and find yourself what happpens.
                   </p>
     </section>
-    <section class="section section-variants">
+    <section class="section section-variants" id="keyframes">
         <h3 class="section__title">
             Key Frames
         </h3>
@@ -415,7 +451,7 @@
                     </span> 
                   </p>
                 </section>
-              <section class="section">
+              <section class="section" id="yoyo">
                 <h3 class="section__title">
                   YoYo Propery
                 </h3>
@@ -452,34 +488,144 @@
                 </video>
               </div>
     </section>
-    <section class="section section-about-me">
+    <section class="section" id="loader">
+      <h3 class="section__title">Custom Loader</h3>
+      <p class="section__body">
+        We can create our own custom loader with what we have learned so far.Try your creativity and come up with crazy ideas ! <br>
+        Here is a simple one for your reference.
+      </p>
+      <div class="code-image-container">
+      <img class="code-img" src="./Assets/Images/loader-img.png">
+   </div>
+   <p class="section___body">
+    <strong>CSS for the div:</strong>
+    <br>
+<span class="syntax">
+.loader{<br>
+height: 10px;<br>
+width:10px;<br>
+border-radius: 50%;}<br>
+</span>
+<strong> Let's see our custom loader in action</strong>
+</p>
+<div class="section__video">
+  <video 
+  src="./Assets/videos/loader-vid.mp4"
+   class="video__item" controls width="550" height="350">
+    Video tag is not supported in this browser.
+  </video>
+</div>
+  
+     
+    </section>
+    <section class="section" id="use-cycle">
+      <h3 class="section__title">Use Cycle</h3>
+      <p class="section__body">
+   Use Cycle is a hook that help us to toggle between different animtions. It is similar to useState.<br>
+   First we need to import useCycle from framer motion as follows<br>
+   <span class="syntax">
+    import {useCycle} from 'framer-motion' 
+   </span><br>
+   <strong> Define our useCycle</strong>
+   <br>
+   <span class="syntax">
+    const [animation,cycleAnimation] = <br> 
+    useCycle("animationOne" , "animationTwo") <br>
+   </span>
+   <br>Here i have defined two animations inside useCycle array that is 
+   animationOne and animationTwo. We can define more animations if we want.<br>
+   Now check the following screenshot , i hope no need to explain more abut it, funtionality is same like useState.
+      </p>
+      <div class="code-image-container">
+        <img class="code-img"
+        src="./Assets/Images/useCycle.png" alt="">
+      </div>
+      <p class="ssection__body">
+      <strong>See How The Animation Is  Changing On Click </strong>
+    </p>
+      <div 
+      class="section__video">
+      <video class="video__item"
+controls width="550" height="350">
+ <source src="./Assets/videos/useCycle.mp4" type="video/mp4" />
+ Video tag is not supported in this browser.
+</video>
+</div>
+</section>
+<section class="section">
+  <h3 class="conclusion">Conclusion</h3>
+  <p class="section__body">
+  congratulations  <i class="fa-regular fa-face-smile"></i>
+  <br>
+    We have learned enough stuffs to start using framer motion in our  projects.
+   Always remember that this is not a complete tutorial, there are more things to learn.<br>
+    <strong>Some Key Words For Your Further Learning:</strong>
+    <br>
+    <ul>
+      <li>Animate Presence</li>
+      <li>Animating SVG</li>
+      <li>Animating Routes</li>
+      <li>Modal Animation</li>
+    </ul>
+  </p>
+    <!-- Happy Animating -->
+    <div class="waviy">
+      <span style="--i:1">H</span>
+      <span style="--i:2">a</span>
+      <span style="--i:3">p</span>
+      <span style="--i:4">p</span>
+      <span style="--i:5">y</span>
+      <span style="--i:6"> -</span>
+      <span style="--i:7">A</span>
+      <span style="--i:8">n</span>
+      <span style="--i:9">i</span>
+      <span style="--i:10">m</span>
+      <span style="--i:11">a</span>
+      <span style="--i:13">t</span>
+      <span style="--i:14">i</span>
+      <span style="--i:15">n</span>
+      <span style="--i:16">g</span>
+     </div>
+
+    <!-- happy animating ends -->
+ 
+</section>
+   
+    <section class="section-about-me" id="about">
+      <div class="section">
       <h3 class="about-title">Author</h3>
       <div class="about-container">
        <div class="about-image-conatiner"> <img class="about-image" src="./Assets/Images/profile-pic.jpg"> </div>
         <div class="about-items">
           <h3 class="about-title-author">Fais Edathil</h3>
-          <p class="about-title-author"> Web Developer| Java Script | React js |<br>
+          <p class="about-title-author"> Web Developer - Content Writer  <br>
+            Java Script | React js |
              HTML |
              CSS | Bootstrap | MUI</p>
           <ul class="social-list">
-            <li class="social-item">
-              <i class="fa-brands fa-github"></i>
+            <li class="social-item"><a target="_blank" href="https://github.com/E-fais">
+              <i class="fa-brands fa-github"></i></a>
             </li>
             <li class="social-item">
-              <i class="fa-brands fa-facebook"></i>
+              <a target="_blank" href="https://www.facebook.com/fais.ck">
+              <i class="fa-brands fa-facebook"></i></a>
             </li>
             <li class="social-item">
-              <i class="fa-brands fa-instagram"></i>
+              <a target="_blank" href="https://www.instagram.com/faaiz_29_/">
+              <i class="fa-brands fa-instagram"></i> </a>
             </li>
             <li class="social-item">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </li>
+              <a target="_blank" href="https://www.linkedin.com/in/fais-edathil-815896241/">
+                <i class="fa-brands fa-linkedin-in"></i></a>
+              </li>
+            
             </ul>
         </div>
       </div>
-     
-     
-
+    </div>
     </section>
+    <footer class="footer">
+      <p>Framer Motion Tutorial. 2022</p>
+    </footer>
   </body>
 </html>
