@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="framer motion tutorial for beginners.  React js animation library tutorial. " />
     <meta name="Author" content="Fais Edathil " />
-    <link rel="icon" type="image/x-icon" href="/Assets//Images/framer-motion-favicon.jpeg">
+    <link rel="icon" type="image/x-icon" href="./Assets/Images/logo.jpg">
     <link rel="stylesheet" href="./styles/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,8 +62,8 @@
       <h3>Introduction</h3>
       <p class="section__body">
         Framer Motion is an animation library for React js. It is very easy to
-        learn and beginner friendly as compared to vanilla CSS animations.Using
-        framer motion in our project will speed up our work. Once we learn the basics ,
+        learn.Compared to vanilla CSS animations Framer Motion is more beginner friendly. Using
+        framer motion in our project will speed up our work. Once we learn the basics,
         always try to read the official docs for
         better understanding.</p>
         <div class="git-link">
@@ -82,7 +82,7 @@
       <h3 class="section__title">Installation</h3>
       <h4 class="syntax">npm install framer-motion</h4>
       <p class="section__body">
-        After Installation, need to import a motion component to our project as
+        After Installation,import a motion component to our project as
         follows:- <br />
         <span class="syntax">import {motion} from 'framer-motion'</span>
         <h3>Possible Error On import </h3>
@@ -143,7 +143,7 @@
       <p class="section__body">
         Now we can add an initial attribute so that we can customize our
         animation. <br />
-        Initial attribute as the name indicates , is used to define the
+        Initial attribute as the name indicates, is used to define the
         beginning of our animation.
         <br />Look at the sample code below:<br />
       </p>
@@ -164,14 +164,14 @@
         </video>
       </div>
         <p class="section__body">
-          What did just happened here? <br>
+          What did just happen here? <br>
           Here X:0 means original position of the object.<br>
-        When the page renders animation begins  300 px away from original position and 
+        When the page renders our object is  300 px away from original position and 
         at the end of the animation object reach at it's original position,that is X:0 
-        <br> <br>
+        <br> 
          <strong> Assingment:</strong>  
       <br>
-      Now try animting  opacity property yourself.
+      Now try animating  opacity property yourself.
       <br>
       Hint: initial= opacity:0 <br>
       <span> </span>animate=opacity:1
@@ -182,10 +182,10 @@
       <p class="section__body">
         Transition attribute gives us more control and customisation on our
         animation.
-        We have already learned to move object from one position to other.We can define a transition "type" 
+        We have already learned to move object from one position to other. We can define a transition "type" 
         for this animation.
         <br />
-        Here is an example for animation type 'spring' which is also the default type.Explore more types yourself. 
+        Here is an example for animation type 'spring' which is also the default type. Explore more types yourself. 
         <br />
         <strong> See the sample code below:</strong> 
          <br />
@@ -262,12 +262,12 @@
             Variants
         </h3>
         <p class="section__body">
-           We have learnt enough basics, congratulations !!.
+           We have learnt enough basics. congratulations !!
             Let's learn some advanced stuffs now.
             Imagine we are working on a big project, defining animation properties in every line will be 
             extremely difficult.<br>
-            Thats exactly were <b>Variants</b> come for our help.
-            In this method , we have to define our animations as an object .
+            That's exactly were <b>Variants</b> come for our help.
+            In this method, we must define our animation as an object.
 </p>
             <div class="code-image-container">
               <img class="code-img"
@@ -328,7 +328,7 @@
             </video>
                   </div>
                    <p class="section__body">
-                    Here both animations take place simultaniously,which is not looking great.<br>
+                    Here both animations take place simultaniously, which is not looking great.<br>
                     So we can use orchestration properties  which will give a better look for our animations.
                     <br>
                     <strong>when property:</strong>
@@ -371,7 +371,7 @@
                     <span class="syntax">
                       staggerChildren.
                     </span> <br>
-                    This will make animation one by one.Are you confused of my explanation?<br>
+                    This will make animation one by one. Are you confused of my explanation?<br>
                     Don't worry,
                      just watch the end result and you will get to know what's exactly
                      happening.
@@ -400,7 +400,7 @@
                   </div>
                   <p class="section__body">
                     Be creative and practice with variety of combinations for parent and child animations.<br>
-                    Did you notice two new properties inside transition ? <br>
+                    Did you notice two new properties inside transition? <br>
                     <span class="syntax">damping & mass</span> , what are they?<br>
                     That's the Assingment for this section. Change it's values and find yourself what happpens.
                   </p>
@@ -412,7 +412,7 @@
         <p class="section__body">
            When it comes to animation, key frames are inevitable. 
            Let's start with basics.<br>
-            We are going to define our keyframes  array inside the transtion object.Confused?
+            We are going to define our keyframes  array inside the transtion object. Confused?
            Don't worry, 
            it's not that complicated. 
              <br>
@@ -443,7 +443,7 @@
                     </video>
                   </div>
                   <p class="section__body">
-                    If we want to repeat this animation 10 times,what should we do?
+                    If we want to repeat this animation 10 times, what should we do?
                     Repeating scale property ten times is not a good idea, right?<br>
                     So we are going to learn a new property  
                     <span class="syntax">
@@ -457,7 +457,7 @@
                 </h3>
                 <p class="section__body">
                  Now we can substitute Key frames array  with yoyo property. <br>
-                  Yoyo is defined inside transition object.If we need to repeat our animation ten times, 
+                  Yoyo is defined inside transition object. If we need to repeat our animation ten times, 
                   write the code as follows.
                   <br>
                   <span class="syntax">
@@ -491,7 +491,7 @@
     <section class="section" id="loader">
       <h3 class="section__title">Custom Loader</h3>
       <p class="section__body">
-        We can create our own custom loader with what we have learned so far.Try your creativity and come up with crazy ideas ! <br>
+        We can create our own custom loader with what we have learned so far. Try your creativity and come up with crazy ideas ! <br>
         Here is a simple one for your reference.
       </p>
       <div class="code-image-container">
@@ -524,7 +524,7 @@ border-radius: 50%;}<br>
    Use Cycle is a hook that help us to toggle between different animtions. It is similar to useState.<br>
    First we need to import useCycle from framer motion as follows<br>
    <span class="syntax">
-    import {useCycle} from 'framer-motion' 
+    import {useCycle} from "framer-motion" 
    </span><br>
    <strong> Define our useCycle</strong>
    <br>
@@ -534,7 +534,7 @@ border-radius: 50%;}<br>
    </span>
    <br>Here i have defined two animations inside useCycle array that is 
    animationOne and animationTwo. We can define more animations if we want.<br>
-   Now check the following screenshot , i hope no need to explain more abut it, funtionality is same like useState.
+   Now check the following screenshot , i hope no need to explain more about it, funtionality is same like useState.
       </p>
       <div class="code-image-container">
         <img class="code-img"
